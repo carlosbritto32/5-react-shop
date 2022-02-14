@@ -1,13 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { minimizerPlugin } = require("html-loader/dist/plugins");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: "/",
   },
   mode: "development",
   resolve: {
@@ -47,8 +47,6 @@ module.exports = {
     }),
   ],
   devServer: {
-    allowedHosts: path.join(__dirname, "dist"),
-    compress: true,
-    port: 3005,
+    historyApiFallback: true,
   },
 };
