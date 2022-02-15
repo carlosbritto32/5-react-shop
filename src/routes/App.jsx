@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Header } from "../components/Header";
 import { Layout } from "../containers/layout";
 import { Login } from "../containers/login";
 import { RecoveryPassword } from "../containers/RecoveryPassword";
